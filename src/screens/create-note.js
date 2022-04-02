@@ -21,6 +21,7 @@ export const CreateNote = () => {
     };
 
     // test
+    //dasda
     return (<View>
         <Text>create-note</Text>
         <TextInput
