@@ -5,13 +5,13 @@ import { writeNote, readNote } from '../utils/myfs';
 
 // props.route.params.filename
 export const NoteEditor = (props) => {
-    const _tin = { min: 1, max: 10, format: '.txt' }; //min,max title size
+    const _tin = { min: 1, max: 10, format: '.txt' }; // min,max title size
     const [ title, titleChange ] = React.useState('');
     const [ content, contentChange ] = React.useState('');
 
     React.useEffect(() => {
         let isSubscribed = true;
-        if (props.route.params.filename && typeof props.route.params.filename === 'string') {
+        if (props.route.params.filename && typeof props.route.params.filename === 'string') {   // ERROR: undefined is not an object (evaluating 'props.route.params.filename')
             // readNote
             console.log(props.route.params.filename);
             readNote(props.route.params.filename)
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         margin: 12,
         borderWidth: 1,
         padding: 10
-    },
+    } 
 });
 
 export default NoteEditor;

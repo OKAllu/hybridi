@@ -4,23 +4,26 @@ import MyNotes from './mynotes';
 import NoteEditor from './note-editor';
 import Dev from './dev';
 import Loading from './loading';
+import TriggerLoading from './trigger-loading';
 
 export const screenkeys = [
     'home',
     'mynotes',
-    'note-editor',
+    //'note-editor',    // Shows error... using 'mynotes' to edit existing notes
     'create-note',
     'dev',
-    'loading'
+    'loading',
+    'trigger-loading'
 ];
 
 export const screencomponents = [
     Home,
     MyNotes,
-    NoteEditor,
+    //NoteEditor, 
     CreateNote,
     Dev,
-    Loading
+    Loading,
+    TriggerLoading
 ];
 
 export default screenkeys.map((skey, i) => {
