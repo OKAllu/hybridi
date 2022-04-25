@@ -5,25 +5,29 @@ import NoteEditor from './note-editor';
 import Dev from './dev';
 import Loading from './loading';
 import TriggerLoading from './trigger-loading';
+import { Settings } from '../settings';
+import { useTranslation } from 'react-i18next';
 
 export const screenkeys = [
     'home',
     'mynotes',
-    //'note-editor',    // Shows error... using 'mynotes' to edit existing notes
+    'note-editor',
     'create-note',
     'dev',
     'loading',
-    'trigger-loading'
+    'trigger-loading',
+    'settings'
 ];
 
 export const screencomponents = [
     Home,
     MyNotes,
-    //NoteEditor, 
+    NoteEditor, 
     CreateNote,
     Dev,
     Loading,
-    TriggerLoading
+    TriggerLoading,
+    Settings
 ];
 
 export default screenkeys.map((skey, i) => {
@@ -32,4 +36,4 @@ export default screenkeys.map((skey, i) => {
         component: screencomponents[i]
     };
     return screen;
-})
+});
